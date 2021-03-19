@@ -1,0 +1,47 @@
+body, html {
+    background-color: #413E65;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+.text-white {
+    color: #FFF;
+}
+
+.height100 {
+    height: 100vh;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+p {
+    font-size: 2rem;
+    font-weight: 100;
+    margin-bottom: 50px;
+}
+
+.logotipo {
+    height: 20px;
+}
+
+.l5-herro {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    animation-name: entrar;
+    animation-duration: 2s;
+}
+
+@keyframes entrar {
+    from {
+        right: -200px;
+        opacity: 0;
+    }
+    to {
+        right: 0px;
+        opacity: 100;
+    }
+}
