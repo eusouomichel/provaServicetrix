@@ -1,3 +1,17 @@
+<?php
+
+/**
+ * Script formLogin.php
+ * @author Michel Miléski
+ * @version 0.1
+ * 
+ * Formulário de login do sistema
+ */
+
+require_once("./inc/common.php");
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -26,10 +40,21 @@
 		<div class="d-flex flex-row height100">
 			<div class="p-2 align-self-center col-md-4">
 				<div class="form">
-					<form action="formLogin.php" method="POST" name="form-login" id="form-login" class="formValidationJs">
+					<form action="formLoginCheck.php" method="POST" name="form-login" id="form-login" class="formValidationJs">
 						<img src="./images/logo-white.png" class="logotipo">
 						<h1 class="text-white">HelpTrix</h1>
 						<p class="text-white">seu canal único e de acesso rápido!</p>
+						<?php 
+							$msgErro = getError(getParam("msgErro"));
+							if($msgErro) {
+								echo "
+								<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+									".$msgErro."
+									<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+								</div>
+								";
+							}
+						?>
 						<div class="form-floating mb-3">
 							<input type="email" class="form-control" placeholder="E-mail" id="id_email" name="n_email" required data-error-message="Por favor informe um e-mail <b>válido</b>">
 							<label for="id_email">E-mail</label>
