@@ -2,6 +2,7 @@ body, html {
     background-color: #413E65;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
+    font-size: 16px;
 }
 
 .text-white {
@@ -44,4 +45,9 @@ p {
         right: 0px;
         opacity: 100;
     }
+}
+
+.formValidationJs .this-error {
+    color: #fab1a0;
+    font-size: 0.8rem;
 }

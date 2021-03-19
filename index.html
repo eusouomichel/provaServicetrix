@@ -24,23 +24,20 @@
 
 	<div class="container">
 		<div class="d-flex flex-row height100">
-			<div class="p-2 align-self-center">
+			<div class="p-2 align-self-center col-md-4">
 				<div class="form">
-					<form action="" method="POST" name="form-login" id="form-login">
+					<form action="formLogin.php" method="POST" name="form-login" id="form-login" class="formValidationJs">
 						<img src="./images/logo-white.png" class="logotipo">
 						<h1 class="text-white">HelpTrix</h1>
 						<p class="text-white">seu canal único e de acesso rápido!</p>
 						<div class="form-floating mb-3">
-							<input type="text" class="form-control" placeholder="E-mail" id="id_email" name="n_email" required>
+							<input type="email" class="form-control" placeholder="E-mail" id="id_email" name="n_email" required data-error-message="Por favor informe um e-mail <b>válido</b>">
 							<label for="id_email">E-mail</label>
 						</div>
 						<div class="form-floating mb-3">
-							<input type="password" class="form-control" placeholder="Senha" id="id_senha" name="n_senha" required>
+							<input type="password" class="form-control" placeholder="Senha" id="id_senha" name="n_senha" required data-error-message="Por favor verifique as específicações de <b>modelo de senha</b>">
 							<label for="id_senha">Senha</label>
-						</div>
-						<div class="form-check mb-3">
-							<input type="checkbox" class="form-check-input" id="exampleCheck1">
-							<label class="form-check-label text-white" for="exampleCheck1">Permanecer conectado</label>
+							<div id="emailHelp" class="form-text text-white">Informamos que sua senha deve conter pelo menos 6 caracteres e possuir letras e números em sua composição</div>
 						</div>
 						<button type="submit" class="btn btn-danger">Acessar</button>
 					</form>
@@ -55,6 +52,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
 		crossorigin="anonymous"></script>
+
+	<!-- Validation JS -->
+	<script src="./js/formLogin.js"></script>
 </body>
 
 </html>
