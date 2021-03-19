@@ -135,4 +135,36 @@ function getError(int $error_code) {
     }
 }
 
+/**
+ * checkLoginPresence function
+ *
+ * @return void
+ * 
+ * Função para checagem de presença no sistema
+ */
+function checkLoginPresence() {
+    // checar se o usuário esta conectado na session
+    $conn = new PDO("mysql:host=".DB_HOST.";dbname=".DB_BASE, DB_USER,DB_PASS) or print (mysql_error());
+    $token = getSession("token");
+    $error = true;
+
+    $sql = "
+        SELECT
+            id
+        FROM
+            cad_usuarios
+        WHERE
+            token = '".$token."'
+        AND status = 1";
+    foreach ($conn->query($sql) as $row) {
+        $error = false;
+        setSession("token",$token);
+    }
+
+    if($error == true) {
+        clearSession("token");
+        redirect("formLogin.php?msgErro=405");
+    }
+}
+
 ?>

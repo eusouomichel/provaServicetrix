@@ -15,6 +15,7 @@ define("DB_BASE","cliente");
 
 // definição de erros
 $arrayCodes[404]= "Desculpe, seus dados de acesso estão incorretos, tente novamente.";
+$arrayCodes[405]= "Desculpe, você necessita efetuar login para permanecer no sistema.";
 
 define("ERROR_CODE", $arrayCodes);
 

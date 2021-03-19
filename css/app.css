@@ -1,0 +1,39 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
+
+body, html {
+    background-color: #413E65;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.text-white {
+    color: #FFF;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+p {
+    font-size: 2rem;
+    font-weight: 100;
+    margin-bottom: 50px;
+}
+
+.logotipo {
+    height: 20px;
+}
+
+header {
+    background-color: #FFF;
+    height: 50px;
+    width: 100%;
+    box-shadow: 1px 0px 10px #000;
+    margin-bottom: 20px;
+}
+
+header .navbar-brand img {
+    height: 25px;
+}

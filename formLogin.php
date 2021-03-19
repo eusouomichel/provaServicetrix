@@ -45,14 +45,17 @@ require_once("./inc/common.php");
 						<h1 class="text-white">HelpTrix</h1>
 						<p class="text-white">seu canal único e de acesso rápido!</p>
 						<?php 
-							$msgErro = getError(getParam("msgErro"));
+							// check de retorno de erro
+							$msgErro = getParam("msgErro");
 							if($msgErro) {
-								echo "
-								<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-									".$msgErro."
-									<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-								</div>
-								";
+								if(getError(getParam("msgErro"))) {
+									echo "
+									<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+										".getError(getParam("msgErro"))."
+										<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+									</div>
+									";
+								}
 							}
 						?>
 						<div class="form-floating mb-3">

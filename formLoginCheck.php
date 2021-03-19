@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Script formLogin.php
+ * Script formLoginCheck.php
  * @author Michel Miléski
  * @version 0.1
  * 
